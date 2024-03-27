@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <script src="./js.bootstrap.min.js"></script>
+  <script src="./js.jquery.min.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Document</title>
+</head>
+
+<body onload="showHotel()">
+  <div class="row">
+    <div class="col-3">
+      <h1>Thêm Khách Sạn</h1>
+      <div class="form">
+        <div class="row">
+          <div class="col">
+            <input type="text" id="hotelName" placeholder="Tên Khách Sạn" />
+          </div>
+          <div class="col">
+            <input type="text" id="hotelImage" placeholder="URL Khách Sạn" />
+          </div>
+          <div class="col">
+            <input type="text" id="hotelMadeIn" placeholder="Địa Chỉ" />
+          </div>
+          <div class="col">
+            <input type="text" id="hotelPrice" placeholder="Giá" />
+          </div>
+        </div>
+        <br />
+        <input type="button" value="Thêm Khách Sạn" onclick="createHotel()" />
+        <input type="button" value="Xoá" onclick="deleteContent()" />
+      </div>
+    </div>
+    <div class="col-9">
+      <h1>Danh Sách Khách Sạn</h1>
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Stt</th>
+            <th>Tên Khách Sạn</th>
+            <th>Hình ảnh</th>
+            <th>Địa Chỉ</th>
+            <th>Giá</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="tbl"></tbody>
+      </table>
+
+      <div id="overlay" onclick="closeEditForm()"></div>
+      <div id="editForm" style="display: none">
+        <h2>Sửa Khách Sạnn</h2>
+        <input type="text" id="editHotelName" placeholder="Tên Khách Sạn" />
+        <input type="text" id="editHotelImage" placeholder="URL Khách Sạn" />
+        <input type="text" id="editHotelMadeIn" placeholder="Xuất xứ" />
+        <input type="text" id="editHotelPrice" placeholder="Giá" />
+        <br />
+        <input type="button" value="Update Product" onclick="updateHotel()" />
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
